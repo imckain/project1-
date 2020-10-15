@@ -1,5 +1,9 @@
 :root {
-
+    --logo-font: 'Lobster', cursive;
+    --main-background-color: #F5F6EA;
+    --font-color: #D54215;
+    --accent-color: #F7AF30;
+    --main-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -16,4 +20,110 @@ body {
 main {
     flex-grow: 1;
     flex-direction: column;
+    background-color: var(--main-background-color);
+    font-family: var(--main-font);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--logo-font);
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    color: var(--font-color);
+    text-shadow: 2px 2px 5px black;
+    border-bottom: 4.5px solid var(--accent-color);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.sidenav-trigger {
+    padding-left: 20px;
+}
+
+.fas {
+    font-size: 38px;
+    font-style: normal;
+    color: var(--font-color);
+    text-shadow: 1px 1px 3px var(--accent-color);
+}
+
+h1 {
+    padding-right: 20px;
+    margin-top: 0;
+    font-size: 90px;
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 15px;
+    font-family: var(--main-font);
+    border-top: 4.5px solid var(--accent-color);
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.user-view {
+    width: auto;
+    height: 184px;
+}
+
+.background {
+    width: 300px;
+    height: 200px;
+}
+
+.background img {
+    width: 100%;
+    height: auto;
+}
+
+.divider {
+    background: linear-gradient(90deg, rgba(213,66,21,1) 51%, rgba(247,175,48,1) 80%, rgba(247,175,48,0) 100%);
+    width: auto;
+    height: 10px;
+}
+
+#divider {
+    background: linear-gradient(90deg, rgba(213,66,21,1) 51%, rgba(247,175,48,1) 80%, rgba(247,175,48,0) 100%);
+    height: 3px;
+    width: 600px;
+    margin-left: 5px;
+}
+
+homepage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#main-header {
+    margin-bottom: 4px;
+}
+
+#featured-recipe {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+#random-recipes {
+    margin-bottom: 4px;
 }
