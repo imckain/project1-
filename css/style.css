@@ -59,7 +59,6 @@ h1 {
     padding-right: 20px;
     margin-top: 0;
     font-size: 90px;
-    
 }
 
 footer {
@@ -118,12 +117,65 @@ homepage {
     margin-bottom: 4px;
 }
 
-#featured-recipe {
+#recipe {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: fit-content;
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 30px;
 }
 
+#info-box {
+    display: flex;
+}
+
+#image-box {
+    display: inline-block;
+    overflow: visible;
+}
+
+#image {
+    width: 30vw;
+    height: 100%;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--font-color);
+}
+
+#info {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
 #random-recipes {
+    font-size: 30px;
     margin-bottom: 4px;
+}
+
+#main-header {
+    font-size: 30px;
+}
+
+#search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#search-button {
+    margin-left: 15px;
+    height: 35px;
+    width: 70px;
+    font-family: var(--logo-font);
+    font-size: 20px;
 }
