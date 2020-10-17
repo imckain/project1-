@@ -96,7 +96,7 @@ footer {
 .divider {
     background: linear-gradient(90deg, rgba(213,66,21,1) 51%, rgba(247,175,48,1) 80%, rgba(247,175,48,0) 100%);
     width: auto;
-    height: 10px;
+    height: 4.5px;
 }
 
 #divider {
@@ -117,14 +117,25 @@ homepage {
     margin-bottom: 4px;
 }
 
+#results {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
 #recipe {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 80%;
     height: fit-content;
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 30px;
+}
+
+#recipe-interior {
+    display: flex;
+    flex-direction: row;
 }
 
 #info-box {
