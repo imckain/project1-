@@ -131,14 +131,14 @@ homepage {
     display: flex;
 }
 
-#image-box {
+/* #image-box {
     display: inline-block;
     overflow: visible;
-}
+} */
 
 #image {
-    width: 30vw;
-    height: 100%;
+    width: auto;
+    height: auto;
     border: 5px solid white;
     border-radius: 10px;
     box-shadow: 5px 5px 10px var(--font-color);
