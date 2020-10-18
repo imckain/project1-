@@ -27,7 +27,8 @@ const $form = $('form');
 const $info = $('#info');
 
 // Event Listeners
-$form.on('submit', handleGetData);
+$form.on('click', 'button', handleGetData);
+$form.on('keydown', '13', handleGetData);
 
 // Functions
 
@@ -38,7 +39,7 @@ function handleGetData(event) {
     $.ajax(BASE_URL + '?q='+ userInput + '&app_id=' + ID + '&app_key=' + KEY)
     .then(function (data) {
         recipeData = data;
-        // generateRecipies();
+        // generateRecipes();
         // generateImage();
         // generateLink();
         render();
@@ -48,7 +49,7 @@ function handleGetData(event) {
     $input.val('');
 };
 
-function generateRecipies() {
+function generateRecipes() {
     return recipeData.hits.map(function(recipeData) {
         console.log(recipeData)
         return `<div id="recipe-interior">
@@ -57,11 +58,12 @@ function generateRecipies() {
                     </div>
                     <div id="info-box">
                         <div id="info">
-                            <p id="label">${recipeData.recipe.label}</p>
-                            <p id="yield">${recipeData.recipe.yield}</p>
-                            <p id="diet-labels">${recipeData.recipe.dietLabels}</p>
-                            <ul id="ingredient-lines">${recipeData.recipe.ingredientLines}</ul>
-                            <div id="urlLink"><a id="url" href="${recipeData.recipe.url}">Get Cookin'</a></div>
+                            <p id="label">${recipeData.recipe.label}</p><br>
+                            <p id="yield">Serves: ${recipeData.recipe.yield}</p><br>
+                            <p id="diet-labels">${recipeData.recipe.dietLabels}</p><br>
+                            <p id="label">Ingredients</p><br>
+                            <ul id="ingredient-lines">${recipeData.recipe.ingredientLines.join('<br>')}</ul><br>
+                            <div id="urlLink"><a id="url" href="${recipeData.recipe.url}">Get Cookin'</a></div><br><br>
                         </div>
                     </div>
                 </div`;
@@ -83,5 +85,5 @@ function render() {
     // $dietLabels.text(recipeData.hits[0].recipe.dietLabels);
     // $ingredientLines.text(recipeData.hits[0].recipe.ingredientLines);
     // $urlLink.html(generateLink());
-    $recipeEl.html(generateRecipies());
+    $recipeEl.html(generateRecipes());
 };

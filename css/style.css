@@ -20,6 +20,7 @@ body {
 main {
     flex-grow: 1;
     flex-direction: column;
+    width: 100%;
     background-color: var(--main-background-color);
     font-family: var(--main-font);
 }
@@ -95,22 +96,23 @@ footer {
 
 .divider {
     background: linear-gradient(90deg, rgba(213,66,21,1) 51%, rgba(247,175,48,1) 80%, rgba(247,175,48,0) 100%);
-    width: auto;
+    width: 80%;
     height: 4.5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 }
 
 #divider {
     background: linear-gradient(90deg, rgba(213,66,21,1) 51%, rgba(247,175,48,1) 80%, rgba(247,175,48,0) 100%);
     height: 3px;
-    width: 600px;
+    width: 80%;
     margin-left: 5px;
-}
-
-homepage {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 #main-header {
@@ -121,6 +123,14 @@ homepage {
     display: flex;
     flex-direction: column;
     height: fit-content;
+}
+
+#label {
+    font-family: var(--logo-font);
+    font-size: 30px;
+    color: var(--font-color);
+    text-shadow: 1px 2px 2px black;
+    width: 80%;
 }
 
 #recipe {
@@ -153,6 +163,7 @@ homepage {
     border: 5px solid white;
     border-radius: 10px;
     box-shadow: 5px 5px 10px var(--font-color);
+    margin-bottom: 60px;
 }
 
 #info {
@@ -186,7 +197,14 @@ form {
 #search-button {
     margin-left: 15px;
     height: 35px;
-    width: 70px;
+    width: 120px;
     font-family: var(--logo-font);
-    font-size: 20px;
+    font-size: 30px;
+    color: var(--font-color);
+    text-shadow: 1px 2px 2px black;
+}
+
+#search-field {
+    border-bottom: 0px solid var(--font-color);
+    box-shadow: 0 0px 0 0 var(--accent-color);
 }
