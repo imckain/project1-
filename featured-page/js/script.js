@@ -3,6 +3,10 @@ $(document).ready(function () {
     $('.sidenav').sidenav();
 });
 
+$(document).ready(function(){
+    $('.carousel').carousel();
+});
+
 // Constants
 const KEY = CONFIG.recipeAPIKey;
 const ID = '4be09ebb'
@@ -16,14 +20,15 @@ const lookUp = {
     '5': 'fish',
     '6': 'grill',
 };
+
 // Variables
 let recipeData, userInput;
 userInput = lookUp[new Date().getDay()];
-// var instance = M.Sidenav.getInstance(elem);
 
 // Cached Element Refernces
 const $recipeEl = $('#recipe');
 const $featuredRecipeEl = $('#featured-recipe');
+const $randomRecipeEl = $('#carousel');
 const $imageBox = $('#image-box');
 const $image = $('#image');
 const $label = $('#label');
@@ -36,26 +41,32 @@ const $form = $('form');
 const $info = $('#info');
 
 // Event Listeners
-// $form.on('submit', handleGetData);
 
 // Functions
 init();
 function init() {
     handleGetData();
-}
-
+    handleGetRandomData();
+};
 
 function handleGetData() {
     $.ajax(BASE_URL + '?q=' + userInput + '&app_id=' + ID + '&app_key=' + KEY)
     .then(function (data) {
         recipeData = data;
-        // generateRecipies();
-        // generateImage();
-        // generateLink();
         render();
     }, function (error) {
         console.log('Bad Request ', error, lookUp.value);
-    })
+    });
+};
+
+function handleGetRandomData() {
+    $.ajax(BASE_URL + '?q=' + userInput + '&app_id=' + ID + '&app_key=' + KEY)
+    .then(function (data) {
+        recipeData = data;
+        renderRandom();
+    }, function (error) {
+        console.log('Bad Request ', error, lookUp.value);
+    });
 };
 
 function generateRecipe() {
@@ -76,24 +87,20 @@ function generateRecipe() {
                         <div id="urlLink"><a id="url" href="${featuredRecipe.recipe.url}">Get Cookin'</a></div><br><br>
                     </div>
                 </div>
-            </div`;
+            </div>`;
 };
 
-// function generateImage() {
-//     return `<img id="image" src="${recipeData.hits[0].recipe.image}" alt="${recipeData.hits[0].recipe.image}">`;
-// };
-
-// function generateLink() {
-//     return `<a id="url" href="${recipeData.hits[0].recipe.url}">Get Cookin'</a>`
-// };
+function generateRandomRecipe() {
+    recipeData.hits.map(function(recipeData) {
+        console.log(recipeData);
+        return `<a class="carousel-item" href="${recipeData.recipe.url}"><img src="${recipeData.recipe.image}"></a>`;
+    })
+};
 
 function render() {
-    // $imageBox.html(generateImage());
-    // $label.text(recipeData.hits[0].recipe.label);
-    // $yield.text(recipeData.hits[0].recipe.yield);
-    // $dietLabels.text(recipeData.hits[0].recipe.dietLabels);
-    // $ingredientLines.text(recipeData.hits[0].recipe.ingredientLines);
-    // $urlLink.html(generateLink());
     $recipeEl.html(generateRecipe());
 };
 
+function renderRandom() {
+    $randomRecipeEl.html(generateRandomRecipe());
+}

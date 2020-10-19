@@ -23,6 +23,8 @@ main {
     width: 100%;
     background-color: var(--main-background-color);
     font-family: var(--main-font);
+    margin-top: 100px;
+    margin-bottom: 60px;
 }
 
 header {
@@ -31,6 +33,7 @@ header {
     justify-content: space-between;
     align-items: baseline;
     font-family: var(--logo-font);
+    position: fixed;
     height: 100px;
     width: 100%;
     background-color: white;
@@ -71,6 +74,11 @@ footer {
     font-size: 15px;
     font-family: var(--main-font);
     border-top: 4.5px solid var(--accent-color);
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .sidenav {
@@ -123,6 +131,7 @@ footer {
     display: flex;
     flex-direction: column;
     height: fit-content;
+    width: 80%;
 }
 
 #label {
@@ -170,6 +179,7 @@ footer {
     margin-left: 10%;
     display: flex;
     flex-direction: column;
+    width: 50vw;
 }
 
 #random-recipes {

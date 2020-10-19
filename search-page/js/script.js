@@ -10,7 +10,6 @@ const BASE_URL = 'https://api.edamam.com/search';
 
 // Variables
 let recipeData, userInput;
-// var instance = M.Sidenav.getInstance(elem);
 
 // Cached Element Refernces
 const $recipeEl = $('#recipe');
@@ -31,7 +30,6 @@ $form.on('click', 'button', handleGetData);
 $form.on('keydown', '13', handleGetData);
 
 // Functions
-
 function handleGetData(event) {
     event.preventDefault();
     userInput = $input.val();
@@ -39,9 +37,6 @@ function handleGetData(event) {
     $.ajax(BASE_URL + '?q='+ userInput + '&app_id=' + ID + '&app_key=' + KEY)
     .then(function (data) {
         recipeData = data;
-        // generateRecipes();
-        // generateImage();
-        // generateLink();
         render();
     }, function (error) {
         console.log('Bad Request ', error);
@@ -70,20 +65,6 @@ function generateRecipes() {
     })
 };
 
-function generateImage() {
-    return `<img id="image" src="${recipeData.hits[0].recipe.image}" alt="${recipeData.hits[0].recipe.image}">`;
-};
-
-function generateLink() {
-    return `<a id="url" href="${recipeData.hits[0].recipe.url}">Get Cookin'</a>`
-};
-
 function render() {
-    // $imageBox.html(generateImage());
-    // $label.text(recipeData.hits[0].recipe.label);
-    // $yield.text(recipeData.hits[0].recipe.yield);
-    // $dietLabels.text(recipeData.hits[0].recipe.dietLabels);
-    // $ingredientLines.text(recipeData.hits[0].recipe.ingredientLines);
-    // $urlLink.html(generateLink());
     $recipeEl.html(generateRecipes());
 };
