@@ -1,10 +1,12 @@
-// Materialize Init
+// Materialize / Bootstrap Init
 $(document).ready(function () {
     $('.sidenav').sidenav();
 });
 
 $(document).ready(function(){
-    $('.carousel').carousel();
+    $('.carousel').carousel({
+        interval: 2000
+    })
 });
 
 // Constants
@@ -14,11 +16,11 @@ const BASE_URL = 'https://api.edamam.com/search';
 const lookUp = {
     '0': 'chicken',
     '1': 'shrimp',
-    '2': 'beef',
+    '2': 'tacos',
     '3': 'pork',
     '4': 'lamb',
     '5': 'fish',
-    '6': 'grill',
+    '6': 'beef',
 };
 
 // Variables
@@ -28,7 +30,8 @@ userInput = lookUp[new Date().getDay()];
 // Cached Element Refernces
 const $recipeEl = $('#recipe');
 const $featuredRecipeEl = $('#featured-recipe');
-const $randomRecipeEl = $('#carousel');
+// const $randomRecipeEl = $('#recipe-select');
+const $randomRecipeEl = $('#carousel-inner');
 const $imageBox = $('#image-box');
 const $image = $('#image');
 const $label = $('#label');
@@ -54,6 +57,7 @@ function handleGetData() {
     .then(function (data) {
         recipeData = data;
         render();
+        renderRandom();
     }, function (error) {
         console.log('Bad Request ', error, lookUp.value);
     });
@@ -91,9 +95,16 @@ function generateRecipe() {
 };
 
 function generateRandomRecipe() {
-    recipeData.hits.map(function(recipeData) {
+    return recipeData.hits.map(function(recipeData) {
         console.log(recipeData);
-        return `<a class="carousel-item" href="${recipeData.recipe.url}"><img src="${recipeData.recipe.image}"></a>`;
+        return `<div class="carousel-item">
+                    <img class="d-block w-100" src="${recipeData.recipe.image}" alt="${recipeData.recipe.label}">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>${recipeData.recipe.label}</h5>
+                    </div>
+                </div>`;
+        // return `<p>${recipeData.recipe.label}</p>`;
+      
     })
 };
 
@@ -103,4 +114,12 @@ function render() {
 
 function renderRandom() {
     $randomRecipeEl.html(generateRandomRecipe());
-}
+};
+
+// `<div class="carousel-item">
+//                     <div>
+//                         <img class="d-block w-100" src="${recipeData.recipe.image}" alt="First slide">
+//                     </div>
+//                 </div>`
+
+  

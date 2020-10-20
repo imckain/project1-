@@ -33,7 +33,7 @@ header {
     justify-content: space-between;
     align-items: baseline;
     font-family: var(--logo-font);
-    position: fixed;
+    position: fixed;             
     height: 100px;
     width: 100%;
     background-color: white;
@@ -189,6 +189,7 @@ footer {
 
 #main-header {
     font-size: 30px;
+    margin-top: 30px;
 }
 
 #search {
