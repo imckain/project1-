@@ -1,7 +1,8 @@
 # Welcome to Food Finder!
 <!-- <Your Applications title>: A description of your application. Background info of the application is a nice touch.
   Screenshot(s): Images of your actual application. -->
-**Food Finder is a web application to help you finding your next meal**
+**Food Finder is a web application to help you finding your next meal**<br>
+---
 Cooking can be some work, but it can also be rewarding<br>
 Food Finder tries to make it a little easier for you<br>
 Discovering our featured recipe of the day,<br>
