@@ -15,14 +15,26 @@
 ## Navigate To Our Ingredient Search Page <br>
 ![Image](https://i.imgur.com/tfjaDZI.png)<br>
 
-## Enter An Ingredient, And Find Tonight's Dinner! <br>
+## Enter An Ingredient, and Find Tonight's Dinner! <br>
 ![Image](https://i.imgur.com/hDhMwO1.png)<br>
 
 <!-- Technologies Used: List of the technologies used, e.g., JavaScript, HTML, CSS... -->
-
+# Technologies Used:
+- HTML
+- CSS
+- JavaScript
+- JQuery
+- Ajax
+- API
+- Materialize
+- BootStrap
 
 <!-- Getting Started: In this section include the link to your deployed application and any instructions you deem important. -->
 
+## Vist us at: [Link](https://imckain.github.io/project1-/)<br>
+
 
 <!-- Next Steps: Planned future enhancements (icebox items). -->
-
+## Future enchancements:<br>
+- Add NEWS API to provide current articles on health and nuitrition
+- Add a random Recipe Generator to give you multiple options
