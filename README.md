@@ -1,6 +1,4 @@
 # Welcome to Food Finder!
-<!-- <Your Applications title>: A description of your application. Background info of the application is a nice touch.
-  Screenshot(s): Images of your actual application. -->
 **Food Finder is a web application to help you finding your next meal**<br>
 > Cooking can be some work, but it can also be rewarding<br>
 > Food Finder tries to make it a little easier for you<br>
@@ -18,7 +16,6 @@
 ## Enter An Ingredient, and Find Tonight's Dinner! <br>
 ![Image](https://i.imgur.com/hDhMwO1.png)<br>
 
-<!-- Technologies Used: List of the technologies used, e.g., JavaScript, HTML, CSS... -->
 # Technologies Used:
 - HTML
 - CSS
@@ -27,14 +24,9 @@
 - Ajax
 - API
 - Materialize
-- BootStrap
-
-<!-- Getting Started: In this section include the link to your deployed application and any instructions you deem important. -->
 
 ## Vist us at: [Food Finder](https://imckain.github.io/project1-/)<br>
 
-
-<!-- Next Steps: Planned future enhancements (icebox items). -->
 ## Future enchancements:<br>
 - Add NEWS API to provide current articles on health and nuitrition
 - Add a random Recipe Generator to give you multiple options
