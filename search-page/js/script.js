@@ -4,9 +4,9 @@ $(document).ready(function () {
 });
 
 // Constants
-const KEY = CONFIG.recipeAPIKey;
-const ID = '4be09ebb'
-const BASE_URL = 'https://api.edamam.com/search';
+// const KEY = CONFIG.recipeAPIKey;
+// const ID = '4be09ebb'
+const BASE_URL = 'https://proxify-food-finder.herokuapp.com/api';
 
 // Variables
 let recipeData, userInput;
@@ -34,7 +34,7 @@ function handleGetData(event) {
     event.preventDefault();
     userInput = $input.val();
     if(!userInput) return;
-    $.ajax(BASE_URL + '?q='+ userInput + '&app_id=' + ID + '&app_key=' + KEY)
+    $.ajax(BASE_URL + '?input=' + userInput)
     .then(function (data) {
         recipeData = data;
         render();
