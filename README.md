@@ -7,6 +7,9 @@
 > Food Finder will always be there to help.<br>
 <br>
 
+## Wireframe
+![Image](https://i.imgur.com/KRkruyt.png)<br>
+
 ## Our Featured Recipe Page <br>
 ![Image](https://i.imgur.com/d5UiwnO.png)<br>
 

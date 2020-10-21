@@ -219,7 +219,3 @@ form {
     border-bottom: 0px solid var(--font-color);
     box-shadow: 0 0px 0 0 var(--accent-color);
 }
-
-.carousel-inner {
-    height: 100%;
-}
