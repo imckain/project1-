@@ -10,9 +10,9 @@ $(document).ready(function(){
 });
 
 // Constants
-const KEY = CONFIG.recipeAPIKey;
-const ID = '4be09ebb'
-const BASE_URL = 'https://api.edamam.com/search';
+// const KEY = CONFIG.recipeAPIKey;
+// const ID = '4be09ebb'
+const BASE_URL = 'https://proxify-food-finder.herokuapp.com/api';
 const lookUp = {
     '0': 'chicken',
     '1': 'shrimp',
@@ -53,18 +53,17 @@ function init() {
 };
 
 function handleGetData() {
-    $.ajax(BASE_URL + '?q=' + userInput + '&app_id=' + ID + '&app_key=' + KEY)
+    $.ajax(BASE_URL + '?input=' + userInput)
     .then(function (data) {
         recipeData = data;
         render();
-        renderRandom();
     }, function (error) {
         console.log('Bad Request ', error, lookUp.value);
     });
 };
 
 function handleGetRandomData() {
-    $.ajax(BASE_URL + '?q=' + userInput + '&app_id=' + ID + '&app_key=' + KEY)
+    $.ajax(BASE_URL + '?input=' + userInput)
     .then(function (data) {
         recipeData = data;
         renderRandom();
@@ -115,11 +114,3 @@ function render() {
 function renderRandom() {
     $randomRecipeEl.html(generateRandomRecipe());
 };
-
-// `<div class="carousel-item">
-//                     <div>
-//                         <img class="d-block w-100" src="${recipeData.recipe.image}" alt="First slide">
-//                     </div>
-//                 </div>`
-
-  
