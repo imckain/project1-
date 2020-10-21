@@ -13,7 +13,6 @@ let recipeData, userInput;
 
 // Cached Element Refernces
 const $recipeEl = $('#recipe');
-const $featuredRecipeEl = $('#featured-recipe');
 const $imageBox = $('#image-box');
 const $image = $('#image');
 const $label = $('#label');

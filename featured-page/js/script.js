@@ -27,7 +27,6 @@ userInput = lookUp[new Date().getDay()];
 
 // Cached Element Refernces
 const $recipeEl = $('#recipe');
-const $featuredRecipeEl = $('#featured-recipe');
 const $randomRecipeEl = $('#carousel');
 const $imageBox = $('#image-box');
 const $image = $('#image');
@@ -46,7 +45,7 @@ const $info = $('#info');
 init();
 function init() {
     handleGetData();
-    handleGetRandomData();
+    // handleGetRandomData();
 };
 
 function handleGetData() {
@@ -59,15 +58,15 @@ function handleGetData() {
     });
 };
 
-function handleGetRandomData() {
-    $.ajax(BASE_URL + '?input=' + userInput)
-    .then(function (data) {
-        recipeData = data;
-        renderRandom();
-    }, function (error) {
-        console.log('Bad Request ', error, lookUp.value);
-    });
-};
+// function handleGetRandomData() {
+//     $.ajax(BASE_URL + '?input=' + userInput)
+//     .then(function (data) {
+//         recipeData = data;
+//         renderRandom();
+//     }, function (error) {
+//         console.log('Bad Request ', error, lookUp.value);
+//     });
+// };
 
 function generateRecipe() {
     let randomNumber = Math.floor(Math.random()*recipeData.hits.length)
@@ -90,17 +89,17 @@ function generateRecipe() {
             </div>`;
 };
 
-function generateRandomRecipe() {
-    return recipeData.hits.map(function(recipeData) {
-        console.log(recipeData);
-        return `<a class="carousel-item" href="${recipeData.recipe.url}"><img src="${recipeData.recipe.image}"></a>`;
-    })
-};
+// function generateRandomRecipe() {
+//     return recipeData.hits.map(function(recipeData) {
+//         console.log(recipeData);
+//         return `<a class="carousel-item" href="${recipeData.recipe.url}"><img src="${recipeData.recipe.image}"></a>`;
+//     })
+// };
 
 function render() {
     $recipeEl.html(generateRecipe());
 };
 
-function renderRandom() {
-    $randomRecipeEl.html(generateRandomRecipe());
-};
+// function renderRandom() {
+//     $randomRecipeEl.html(generateRandomRecipe());
+// };
