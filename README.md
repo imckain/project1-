@@ -7,8 +7,22 @@
 > Discovering our featured recipe of the day,<br>
 > or searching by ingredients you have at home<br>
 > Food Finder will always be there to help.<br>
+<br>
+
+## Our Featured Recipe Page <br>
+![Image](https://i.imgur.com/hDhMwO1.png)<br>
+
+## Navigate To Our Ingredient Search Page <br>
+![Image](https://i.imgur.com/tfjaDZI.png)<br>
+
+## Enter An Ingredient, And Find Tonight's Dinner! <br>
+![Image](https://i.imgur.com/hDhMwO1.png)<br>
+
+<!-- Technologies Used: List of the technologies used, e.g., JavaScript, HTML, CSS... -->
 
 
- Technologies Used: List of the technologies used, e.g., JavaScript, HTML, CSS...
- Getting Started: In this section include the link to your deployed application and any instructions you deem important.
-  Next Steps: Planned future enhancements (icebox items).
+<!-- Getting Started: In this section include the link to your deployed application and any instructions you deem important. -->
+
+
+<!-- Next Steps: Planned future enhancements (icebox items). -->
+
