@@ -31,7 +31,7 @@
 
 <!-- Getting Started: In this section include the link to your deployed application and any instructions you deem important. -->
 
-## Vist us at: [Link](https://imckain.github.io/project1-/)<br>
+## Vist us at: [Food Finder](https://imckain.github.io/project1-/)<br>
 
 
 <!-- Next Steps: Planned future enhancements (icebox items). -->
