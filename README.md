@@ -10,7 +10,7 @@
 <br>
 
 ## Our Featured Recipe Page <br>
-![Image](https://i.imgur.com/hDhMwO1.png)<br>
+![Image](https://i.imgur.com/d5UiwnO.png)<br>
 
 ## Navigate To Our Ingredient Search Page <br>
 ![Image](https://i.imgur.com/tfjaDZI.png)<br>
