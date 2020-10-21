@@ -4,9 +4,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function(){
-    $('.carousel').carousel({
-        interval: 2000
-    })
+    $('.carousel').carousel();
 });
 
 // Constants
@@ -30,8 +28,7 @@ userInput = lookUp[new Date().getDay()];
 // Cached Element Refernces
 const $recipeEl = $('#recipe');
 const $featuredRecipeEl = $('#featured-recipe');
-// const $randomRecipeEl = $('#recipe-select');
-const $randomRecipeEl = $('#carousel-inner');
+const $randomRecipeEl = $('#carousel');
 const $imageBox = $('#image-box');
 const $image = $('#image');
 const $label = $('#label');
@@ -96,14 +93,7 @@ function generateRecipe() {
 function generateRandomRecipe() {
     return recipeData.hits.map(function(recipeData) {
         console.log(recipeData);
-        return `<div class="carousel-item">
-                    <img class="d-block w-100" src="${recipeData.recipe.image}" alt="${recipeData.recipe.label}">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>${recipeData.recipe.label}</h5>
-                    </div>
-                </div>`;
-        // return `<p>${recipeData.recipe.label}</p>`;
-      
+        return `<a class="carousel-item" href="${recipeData.recipe.url}"><img src="${recipeData.recipe.image}"></a>`;
     })
 };
 
